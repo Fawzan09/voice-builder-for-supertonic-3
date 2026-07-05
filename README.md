@@ -1,4 +1,4 @@
-# 🎙️ Custom Voice Style Trainer for Supertonic 3 (Community Edition)
+# 🎙️ Custom Voice Style / Clone Trainer for Supertonic 3 (Community Edition)
 
 > **Unofficial, independent project.** Not affiliated with, endorsed by, or connected to Supertone Inc. "Supertonic" is referenced only to describe compatibility with Supertone's open-weight Supertonic 3 model. This is a community tool, not Supertone's official Voice Builder product.
 
