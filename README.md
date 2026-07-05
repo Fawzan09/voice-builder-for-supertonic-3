@@ -1,4 +1,4 @@
-# 🎙️ Custom Voice Style / Clone Trainer for Supertonic 3 (Community Edition)
+# 🎙️ Custom Voice Style Trainer for Supertonic 3 (Community Edition)
 
 > **Unofficial, independent project.** Not affiliated with, endorsed by, or connected to Supertone Inc. "Supertonic" is referenced only to describe compatibility with Supertone's open-weight Supertonic 3 model. This is a community tool, not Supertone's official Voice Builder product.
 
@@ -87,27 +87,59 @@ This product is sold as a packaged, documented, ready-to-run notebook. It does n
 
 ## Included example voices
 
-An `audio/` folder is included with the notebook, containing pre-trained voice styles plus sample clips so you can hear results before training your own:
+An `audio/` folder is included with the notebook, containing pre-trained voice styles plus sample clips in multiple languages so you can hear results before training your own:
 
 ```
 audio/
 ├── men/
-│   ├── source.wav      # original reference recording used for training
-│   └── output.wav      # sample generated with the trained voice style
+│   ├── source.mpeg      # original reference recording used for training
+│   ├── output_en.wav    # English sample
+│   ├── output_hi.wav    # Hindi sample
+│   ├── output_ar.wav    # Arabic sample
+│   ├── output_jp.wav    # Japanese sample
+│   └── output_ko.wav    # Korean sample
 ├── women/
-│   ├── source.wav      # original reference recording used for training
-│   └── output.wav      # sample generated with the trained voice style
+│   ├── source.mp3       # original reference recording used for training
+│   ├── output_en.wav    # English sample
+│   ├── output_hi.wav    # Hindi sample
+│   ├── output_ar.wav    # Arabic sample
+│   ├── output_jp.wav    # Japanese sample
+│   └── output_ko.wav    # Korean sample
 └── jarvis/
-    └── output.wav      # sample generated with the trained voice style — no source/reference recording, fully synthetic
+    └── output_en.wav    # English sample — no source/reference recording
 ```
 
-| Voice | Source audio | Output audio | Notes |
-|---|---|---|---|
-| Men | ✅ included | ✅ included | Trained from a real reference recording |
-| Women | ✅ included | ✅ included | Trained from a real reference recording |
-| Jarvis | — none | ✅ included | |
+### 🎧 Listen to the samples
 
-The `men` and `women` source clips are included so you can compare the original reference against the trained output directly. The `jarvis` voice has no source clip because it isn't cloned from a real recording at all — it carries none of the consent/impersonation considerations that apply to voices trained from an actual person's voice, and is safe to use freely.
+**Men**
+
+| Language | Source | Output |
+|---|---|---|
+| Original reference | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/source.mpeg"></audio> | — |
+| English | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_en.wav"></audio> |
+| Hindi | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_hi.wav"></audio> |
+| Arabic | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_ar.wav"></audio> |
+| Japanese | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_jp.wav"></audio> |
+| Korean | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_ko.wav"></audio> |
+
+**Women**
+
+| Language | Source | Output |
+|---|---|---|
+| Original reference | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/source.mp3"></audio> | — |
+| English | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_en.wav"></audio> |
+| Hindi | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_hi.wav"></audio> |
+| Arabic | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_ar.wav"></audio> |
+| Japanese | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_jp.wav"></audio> |
+| Korean | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_ko.wav"></audio> |
+
+**Jarvis**
+
+| Language | Source | Output |
+|---|---|---|
+| English | — none | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/jarvis/output_en.wav"></audio> |
+
+> Playback works when this README is viewed on GitHub. If you're reading this elsewhere (e.g. as a plain text file), the links above can be opened directly in a browser to play the clips.
 
 To use any of these voices directly without training your own: point Supertonic 3's synthesis step at the corresponding trained `.json` voice style instead of running Steps 3–6.
 
