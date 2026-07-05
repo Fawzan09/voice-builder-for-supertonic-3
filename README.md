@@ -144,6 +144,7 @@ audio/
 To use any of these voices directly without training your own: point Supertonic 3's synthesis step at the corresponding trained `.json` voice style instead of running Steps 3–6.
 
 ## Get this notebook
+<a href="https://www.buymeacoffee.com/Fawzan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 Available here: **[buymeacoffee.com/fawzan/e/554254](https://buymeacoffee.com/fawzan/e/554254)**
 
