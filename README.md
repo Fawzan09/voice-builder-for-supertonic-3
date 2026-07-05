@@ -115,29 +115,29 @@ audio/
 
 | Language | Source | Output |
 |---|---|---|
-| Original reference | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/source.mpeg"></audio> | — |
-| English | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_en.wav"></audio> |
-| Hindi | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_hi.wav"></audio> |
-| Arabic | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_ar.wav"></audio> |
-| Japanese | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_jp.wav"></audio> |
-| Korean | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_ko.wav"></audio> |
+| Original reference | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/source.mpeg) | — |
+| English | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_en.wav) |
+| Hindi | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_hi.wav) |
+| Arabic | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_ar.wav) |
+| Japanese | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_jp.wav) |
+| Korean | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/men/output_ko.wav) |
 
 **Women**
 
 | Language | Source | Output |
 |---|---|---|
-| Original reference | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/source.mp3"></audio> | — |
-| English | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_en.wav"></audio> |
-| Hindi | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_hi.wav"></audio> |
-| Arabic | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_ar.wav"></audio> |
-| Japanese | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_jp.wav"></audio> |
-| Korean | — | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_ko.wav"></audio> |
+| Original reference | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/source.mp3) | — |
+| English | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_en.wav) |
+| Hindi | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_hi.wav) |
+| Arabic | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_ar.wav) |
+| Japanese | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_jp.wav) |
+| Korean | — | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/women/output_ko.wav) |
 
 **Jarvis**
 
 | Language | Source | Output |
 |---|---|---|
-| English | — none | <audio controls src="https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/jarvis/output_en.wav"></audio> |
+| English | — none | [▶ Play](https://github.com/Fawzan09/voice-builder-for-supertonic-3/raw/main/audio/jarvis/output_en.wav) |
 
 > Playback works when this README is viewed on GitHub. If you're reading this elsewhere (e.g. as a plain text file), the links above can be opened directly in a browser to play the clips.
 
