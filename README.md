@@ -2,7 +2,7 @@
 
 > **Unofficial, independent project.** Not affiliated with, endorsed by, or connected to Supertone Inc. "Supertonic" is referenced only to describe compatibility with Supertone's open-weight Supertonic 3 model. This is a community tool, not Supertone's official Voice Builder product.
 
-A ready-to-run Google Colab notebook that trains a **custom voice style** for [Supertonic 3](https://github.com/supertone-inc/supertonic) from a short reference recording — no coding experience required, no local GPU needed.
+A ready-to-run notebook (**Google Colab** and **Kaggle** editions) that trains a **custom voice style** for [Supertonic 3](https://github.com/supertone-inc/supertonic) from a short reference recording — no coding experience required, no local GPU needed.
 
 ---
 
@@ -13,7 +13,9 @@ A ready-to-run Google Colab notebook that trains a **custom voice style** for [S
 3. Trains a custom voice style (`.json`) that plugs directly into Supertonic 3
 4. Lets you preview and download the finished voice style, ready to use anywhere Supertonic 3 runs — offline, on-device, no ongoing API costs
 
-**Runtime required:** Google Colab, GPU runtime (Runtime → Change runtime type → T4 GPU). A free Colab account is enough; Colab Pro is optional but speeds up training.
+**Runtime required:** a free T4 GPU on either platform.
+- **Google Colab:** Runtime → Change runtime type → T4 GPU. A free Colab account is enough; Colab Pro is optional but speeds up training.
+- **Kaggle (Beta):** see the [Kaggle guide](#-running-on-kaggle-beta) below.
 
 ---
 
@@ -29,6 +31,65 @@ A ready-to-run Google Colab notebook that trains a **custom voice style** for [S
 | 6 | Train the voice style |
 | 7 | Test synthesis with your new voice |
 | 8 | Download the trained `.json` voice style |
+
+---
+
+## 🟦 Running on Kaggle (Beta)
+
+The Kaggle edition does the same job as the Colab one, with a few platform differences. Follow these steps once, then just run the cells.
+
+### Before you start (one-time)
+- A free [Kaggle](https://www.kaggle.com) account.
+- **Phone verification** (Kaggle account settings). Kaggle requires it before it lets you turn on GPU and Internet.
+
+### Step-by-step
+
+**1. Import the notebook**
+Kaggle → **Create → New Notebook** → **File → Import Notebook** → upload `Supertonic3_VoiceStyleTrainer_Kaggle.ipynb`.
+
+**2. Prepare your reference audio as a dataset**
+Kaggle has no upload pop-up inside the notebook. Instead:
+- In the notebook's right sidebar open **Input → Upload → New Dataset**.
+- Drag in your recording(s) (WAV / MP3 / M4A / FLAC), give the dataset a name, and click **Create**.
+- Make sure the dataset is listed under **Input** in the sidebar. It is mounted at `/kaggle/input/...` and the notebook finds your audio files automatically.
+
+**3. Set the session options** (right sidebar → **Session options**)
+
+| Setting | Choose | Why |
+|---|---|---|
+| **Accelerator** | **GPU T4 x2** | The notebook uses one GPU (about 2.6 GB VRAM peak). |
+| **Accelerator** | ❌ **Not P100** | Kaggle's PyTorch build has no P100 kernels, so training fails. The notebook detects this and stops with a clear message. |
+| **Internet** | **On** | Needed to clone the repo, install packages and download the model. |
+
+**4. Run the cells top to bottom**
+- **Step 1** checks your GPU and Internet, then clones the training repo.
+- **Step 2** installs the exact PyTorch build this project needs. This downloads a few GB, so **expect a few minutes**. Warnings about `gradio`, `datasets`, `transformers` and similar packages can be ignored; this notebook doesn't use them. You should see `Setup finished successfully!` and `✅ CUDA kernel test OK`.
+- **Steps 3-9** match the Colab version: configure, find your audio, preprocess, train, test, optional multilingual test, then save the output.
+- No restart is needed. If Step 2 ever tells you to restart, use **Run → Restart session** and run again from Step 1.
+
+**5. Get your files out**
+Step 9 copies your trained voice style (`.json`) and a test `.wav` into `/kaggle/working`.
+- Click the download links shown by Step 9 while the session is alive, **or**
+- Click **Save Version → Save & Run All (Commit)**, then open the notebook's **Output** tab to download them. Do this if you want the files to still be there after the session ends.
+
+### Kaggle limits to know
+- Free GPU quota is limited (about 30 hours per week) and sessions time out after several hours.
+- Output space in `/kaggle/working` is limited (about 20 GB), which is plenty for voice styles.
+- Files in `/kaggle/input` are read-only. That's fine, because the notebook only reads from there.
+
+### Kaggle troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `No GPU detected` | Session options → Accelerator → **GPU T4 x2**, then re-run Step 1. |
+| `P100 detected` | Switch the accelerator to **GPU T4 x2**. P100 is not supported. |
+| `Internet is OFF` | Session options → Internet → **On** (needs phone verification), then re-run Step 1. |
+| `No audio files found in /kaggle/input` | Add your audio via **Input → Upload → New Dataset** and make sure it's attached to the notebook. |
+| Step 2 says torchaudio was broken | Run → **Restart session**, then run again from Step 1. |
+| Error mentioning `huggingface_hub` during training | Add `!pip install -q "huggingface_hub>=1.5,<2.0"` at the end of Step 2 and re-run from Step 6. |
+| Files missing after the session ended | Use **Save Version → Save & Run All (Commit)** and download from the **Output** tab. |
+
+> **Beta note:** the Kaggle edition is newer than the Colab one. Menu names on Kaggle may differ slightly as the site changes. If something doesn't match this guide, message me through the purchase page.
 
 ---
 
@@ -148,14 +209,14 @@ To use any of these voices directly without training your own: point Supertonic 
 
 Available here: **[buymeacoffee.com/fawzan/e/554254](https://buymeacoffee.com/fawzan/e/554254)**
 
-**One-time purchase — unlimited voice cloning.** Pay once, keep the notebook forever. Train as many voice styles as you want, whenever you want — no subscriptions, no per-voice fees, no usage limits. Everything runs on your own free Google Colab GPU, so there are no ongoing costs from us at all.
+**One-time purchase — unlimited voice cloning.** Pay once, keep the notebook forever. Train as many voice styles as you want, whenever you want — no subscriptions, no per-voice fees, no usage limits. Everything runs on your own free Google Colab or Kaggle GPU, so there are no ongoing costs from us at all.
 
 ## Support
 
 This is a small, independently maintained tool. If something breaks or a step doesn't run as expected, double check:
-- GPU runtime is enabled (Runtime → Change runtime type → T4 GPU)
+- GPU runtime is enabled (Colab: Runtime → Change runtime type → T4 GPU; Kaggle: Session options → GPU T4 x2, Internet On)
 - You're running cells in order, top to bottom
-- Your reference audio uploaded correctly in Step 3
+- Your reference audio uploaded correctly (Colab: upload step; Kaggle: attached as a dataset under Input)
 
 If you're still stuck, message me directly through the [purchase page](https://buymeacoffee.com/fawzan/e/554254).
 
